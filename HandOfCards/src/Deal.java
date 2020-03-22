@@ -1,9 +1,19 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Deal {
-    Hand hand;
-    void  Scanner(){
+    private List<Hand>hands = new ArrayList<Hand>(2);
+
+    void initializeMain(){
+        for(int i=0; i<2;i++){
+            System.out.println("Vous etes la main"+(i+1));
+            hands.add(i,new Hand(scanner()));
+        }
+    }
+
+    String[] scanner(){
         //String cards;
         Scanner enterCards= new Scanner(System.in);
         String[] card = new String[5];
@@ -16,14 +26,20 @@ public class Deal {
                card[i] = enterCards.nextLine();
            }
         }
-        hand=new Hand(card);
-        System.out.println(" your cards are :" + Arrays.toString(hand.cards));
+        System.out.println(" your cards are :" + Arrays.toString(card));
+        return card;
+    }
 
+
+
+    String Winner(){
+        return "La main"+" gagne avec ";
     }
 
 
     public static void main(String[] args){
         Deal deal= new Deal();
-        deal.Scanner();
+        deal.initializeMain();
+        System.out.println(deal.Winner());
     }
 }
