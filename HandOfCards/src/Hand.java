@@ -12,8 +12,8 @@
  * @version 2020/3/12
  */
 public class Hand {
-    private String[] cards = new String[5];
-    Hand(String cards){
-        this.cards = cards.split(" " );
+     String[] cards = new String[5];
+    Hand(String[] cards){
+        this.cards = cards;
     }
 }
