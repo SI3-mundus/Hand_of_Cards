@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Verify.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deal.java" afterDir="false" />
@@ -43,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Verify">
     <configuration name="Deal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Deal" />
       <module name="HandOfCards" />
@@ -51,8 +52,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Verify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Verify" />
+      <module name="HandOfCards" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Verify" />
         <item itemvalue="Application.Deal" />
       </list>
     </recent_temporary>

@@ -39,7 +39,7 @@ import java.util.Scanner;
                 }
             }
             while(same==5){
-                System.out.println("The number has already appeared 4 times, it can't apear 5th time.");
+                System.out.println("The number has already appeared 4 times, it can't appear 5th time.");
                 System.out.println("You need to entre your "+(i+1)+" card again");
                 card[i] = enterCards.nextLine();
                 while(!cardValide(card[i])){
@@ -63,12 +63,12 @@ import java.util.Scanner;
     boolean cardValide(String card){
         boolean legalcard = false;
         switch (card){
-            case "":
+            case  "":
                 break;
-            case "2" :
+            case  "2" :
                 legalcard= true;
                 break;
-            case "3" :
+            case  "3" :
                 legalcard= true;
                 break;
             case  "4":
