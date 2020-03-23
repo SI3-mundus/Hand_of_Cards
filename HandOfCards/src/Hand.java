@@ -16,4 +16,14 @@ public class Hand {
     Hand(String[] cards){
         this.cards = cards;
     }
+
+    @Override
+    public String toString() {
+        String s = "";
+        for (String card : cards) {
+            s+=card+" ";
+        }
+        return s;
+    }
+
 }
