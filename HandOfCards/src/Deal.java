@@ -25,7 +25,6 @@ public class Deal {
     }
 
     String[] scanner(){
-        //String cards;
         Scanner enterCards= new Scanner(System.in);
         String[] card = new String[5];
         System.out.println("Please Enter Your 5 cards");
@@ -204,7 +203,7 @@ public class Deal {
 
 
 
-    String Winner(){
+    String winner(){
         return "La main" + " gagne avec ";
     }
 
@@ -217,6 +216,5 @@ public class Deal {
         deal.numOfSameCard(deal.hands.get(0));
         System.out.println();
         deal.numOfSameCard(deal.hands.get(1));
-//        System.out.println(deal.Winner());
     }
 }
