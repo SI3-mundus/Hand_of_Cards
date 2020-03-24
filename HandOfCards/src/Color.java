@@ -38,4 +38,26 @@ public class Color {
         }
         return legalcard;
     }
+    String getColor(String color){
+        String value=null;
+        switch (color){
+            case  "":
+                break;
+            case  "Spade" :
+                value= "Spade";
+                break;
+            case  "Heart" :
+                value= "Heart";
+                break;
+            case  "Diamond":
+                value="Diamond";
+                break;
+            case  "Club":
+                value="Club";
+                break;
+            default:
+                System.out.println("illegal color");
+        }
+        return value;
+    }
 }
