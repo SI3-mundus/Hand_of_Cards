@@ -16,44 +16,44 @@ public class Color {
         return s;
     }
     boolean verifyColor(String color){
-        boolean legalcard = false;
+        boolean legalcolor = false;
         switch (color){
             case  "":
                 break;
-            case  "Spade" :
-                legalcard= true;
+            case  "Tr" :
+                legalcolor= true;
                 break;
-            case  "Heart" :
-                legalcard= true;
+            case  "Ca" :
+                legalcolor= true;
                 break;
-            case  "Diamond":
-                legalcard=true;
+            case  "Co":
+                legalcolor=true;
                 break;
-            case  "Club":
-                legalcard=true;
+            case  "Pi":
+                legalcolor=true;
                 break;
 
             default:
-                legalcard= false;
+                legalcolor= false;
         }
-        return legalcard;
+        return legalcolor;
     }
-    String getColor(String color){
-        String value=null;
+    int getColor(String color){
+        int value =0;
         switch (color){
             case  "":
                 break;
-            case  "Spade" :
-                value= "Spade";
+            case  "Tr" :
+                value=1;
                 break;
-            case  "Heart" :
-                value= "Heart";
+            case  "Ca" :
+                value=2;
                 break;
-            case  "Diamond":
-                value="Diamond";
+            case  "Co":
+                value=3;
                 break;
-            case  "Club":
-                value="Club";
+            case  "Pi":
+                value=4;
                 break;
             default:
                 System.out.println("illegal color");

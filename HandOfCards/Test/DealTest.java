@@ -1,10 +1,13 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class DealTest {
     String card1="R";
@@ -16,8 +19,9 @@ public class DealTest {
     private Hand Main1;
     private Hand Main2;
     private Hand Main3;
-    private List<Hand>hands;
+    private List<Hand>hands=new ArrayList<>();
     private Deal deal;
+
 
     @BeforeEach
     void setUp() {
@@ -25,9 +29,20 @@ public class DealTest {
         Main1 = new Hand(cardlist1);
         Main2 = new Hand(cardlist2);
         Main3 = new Hand(cardlist3);
+        hands.add(Main1);
+        hands.add(Main2);
+        hands.add(Main3);
         deal=new Deal();
     }
 
+    @Test
+    void init(){
+        assertAll(
+                () -> assertEquals(3, hands.size()),
+                () -> assertEquals(5, Main1.cards.length),
+                () -> assertEquals(5, cardlist3.length)
+        );
+    }
     @Test
     void cardvalider(){
         assertAll(
@@ -37,5 +52,20 @@ public class DealTest {
         );
     }
 
+    @Test
+    void  valideCard(){
+        //assertEquals(,deal.valideCard(card2).);
+        String data="7";
+        InputStream stdin=System.in;
+        try{
+        System.setIn(new ByteArrayInputStream(data.getBytes()));
+        deal.valideCard(card2);
+        }finally {
+            System.setIn(stdin);
+        }
+
+
+        //assertTrue(deal.valideCard(card2));
+    }
 
 }

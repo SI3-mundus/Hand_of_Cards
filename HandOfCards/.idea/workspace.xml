@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandOfCards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HandOfCards.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HandOfCards/DealTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HandOfCards/DealTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Verify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DealTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -24,11 +31,33 @@
   <component name="ProjectId" id="1Z1ZeYb4KM7ivgQTBIk3uAQwE6P" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -42,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Verify">
+  <component name="RunManager" selected="JUnit.DealTest.valideCard">
     <configuration name="Deal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Deal" />
       <module name="HandOfCards" />
@@ -57,10 +86,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DealTest.cardvalider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HandOfCards" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DealTest" />
+      <option name="METHOD_NAME" value="cardvalider" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DealTest.valideCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HandOfCards" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DealTest" />
+      <option name="METHOD_NAME" value="valideCard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Verify" />
+        <item itemvalue="JUnit.DealTest.valideCard" />
         <item itemvalue="Application.Deal" />
+        <item itemvalue="JUnit.DealTest.cardvalider" />
+        <item itemvalue="Application.Verify" />
       </list>
     </recent_temporary>
   </component>
@@ -69,7 +120,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="296fb7f2-6ad7-4145-bf1b-83ea2aa54861" name="Default Changelist" comment="" />
+      <changelist id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="" />
       <created>1584009229201</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
