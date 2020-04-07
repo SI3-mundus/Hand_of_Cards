@@ -8,16 +8,11 @@ import java.util.Scanner;
 public class Deal {
     private List<Hand>hands = new ArrayList<Hand>(2);
     private List<String> total=new ArrayList<String>(10);
+    private String[] card;
     void initializeMain(){
         for(int i=0; i<2;i++){
             System.out.println("Vous etes la main"+(i+1));
             hands.add(i,new Hand(scanner()));
-//            Hand lHand = new Hand(new String[]{"2Tr", "2Ca", "7Ca", "2Tr", "2Pi"});
- //           Hand rHand = new Hand(new String[]{"3Tr", "5Ca", "5Co", "5Tr", "3Co"});
-  //          System.out.println("lHand:"+lHand.toString());
-   //         System.out.println("rHand:"+rHand.toString());
-    //        hands.add(lHand);
-     //       hands.add(rHand);
         }
         for (Hand e: hands){
             System.out.println(" your cards are :" + Arrays.toString(e.cards));
@@ -26,42 +21,19 @@ public class Deal {
 
     String[] scanner(){
         Scanner enterCards= new Scanner(System.in);
-        String[] card = new String[5];
         System.out.println("Please Enter Your 5 cards");
-        for(int i=0; i <card.length;i++){
-            System.out.println("Please Enter Your "+(i+1)+" card, and end with enter");
-            card[i] = enterCards.nextLine();
-            while(!cardValide(card[i])){
-                System.out.println("You need to entre your "+(i+1)+" card again,  what you enter is illegal.");
-                System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
-                card[i] = enterCards.nextLine();
-            }
-            total.add(card[i]);
-            int same=0;
-            for (String c: total){
-                if(card[i].equals(c)){
-                    same++;
-                }
-            }
-            while(same==5){
-                System.out.println("The number has already appeared 4 times, it can't apear 5th time.");
-                System.out.println("You need to entre your "+(i+1)+" card again");
-                card[i] = enterCards.nextLine();
-                while(!cardValide(card[i])){
-                    System.out.println("You need to entre your "+(i+1)+" card again,  what you enter is illegal.");
-                    System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
-                    card[i] = enterCards.nextLine();
-                }
-                total.set(total.size()-1,card[i]);
-                same=0;
-                for (String c: total){
-                    if(card[i].equals(c)){
-                        same++;
-                    }
-                }
-            }
-
+        String input=enterCards.nextLine();
+        card = input.split(" ");
+        //System.out.println(Arrays.toString(card)+card.length);
+        //for (int i=0;i<card.length;i++){System.out.println(card[i]);}
+        while(card.length!=5){
+            System.out.println("Please Enter Your 5 cards");
+            input=enterCards.nextLine();
+            card = input.split(" ");
         }
+        for (int i = 0; i < card.length; i++) { valideCard(card[i]);}
+        for(int i = 0; i < card.length; i++){total.add(card[i]);}
+        valideSame(card);
         return card;
     }
 
@@ -115,7 +87,58 @@ public class Deal {
         return legalcard;
     }
 
+    void valideCard(String card1) {
 
+        while (!cardValide(card1)) {
+            System.out.println("You need to entre your card again,  what you enter is illegal.");
+            System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
+            Scanner scanner=new Scanner(System.in);
+            card1=scanner.nextLine();
+        }
+
+<<<<<<< HEAD
+=======
+    }
+
+    void valideSame(String[] card){
+        Scanner scanner=new Scanner(System.in);
+        int p=0;
+        for (int i = 0; i < card.length; i++) {
+            int same=0;
+            for (String c: total){
+                if(card[i].equals(c)){
+                    same++;
+                }
+                if(same==5){
+                    p=total.indexOf(c);
+                }
+            }
+
+            while (same==5){
+                System.out.println("The number has already appeared 4 times, it can't apear 5th time.");
+                System.out.println("You need to entre your "+(i+1)+"th card again");
+                card[i] = scanner.nextLine();
+                while (!cardValide(card[i])) {
+                    System.out.println("You need to entre your card again,  what you enter is illegal.");
+                    System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
+                    card[i]=scanner.nextLine();
+                }
+                //System.out.println(card[i]);
+                total.set(p,card[i]);
+                same=0;
+                for (String c: total){
+                    if(card[i].equals(c)){
+                        same++;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+>>>>>>> 7789a88acd288d8cb0f050a453544322e6b9ee5d
     String winner(){
         return "La main" + " gagne avec ";
     }
@@ -125,7 +148,8 @@ public class Deal {
 
     public static void main(String[] args){
         Deal deal = new Deal();
+        //deal.valideCard("77");
         deal.initializeMain();
-        System.out.println();
+        //System.out.println();
     }
 }
