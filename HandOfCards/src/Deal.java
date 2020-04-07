@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Deal {
     private List<Hand>hands = new ArrayList<Hand>(2);
     private List<String> total=new ArrayList<String>(10);
+    Scanner enterCards= new Scanner(System.in);
     private String[] card;
     void initializeMain(){
         for(int i=0; i<2;i++){
@@ -20,7 +21,7 @@ public class Deal {
     }
 
     String[] scanner(){
-        Scanner enterCards= new Scanner(System.in);
+
         System.out.println("Please Enter Your 5 cards");
         String input=enterCards.nextLine();
         card = input.split(" ");
@@ -92,8 +93,7 @@ public class Deal {
         while (!cardValide(card1)) {
             System.out.println("You need to entre your card again,  what you enter is illegal.");
             System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
-            Scanner scanner=new Scanner(System.in);
-            card1=scanner.nextLine();
+            card1=enterCards.nextLine();
         }
 
 <<<<<<< HEAD
@@ -101,7 +101,6 @@ public class Deal {
     }
 
     void valideSame(String[] card){
-        Scanner scanner=new Scanner(System.in);
         int p=0;
         for (int i = 0; i < card.length; i++) {
             int same=0;
@@ -117,13 +116,13 @@ public class Deal {
             while (same==5){
                 System.out.println("The number has already appeared 4 times, it can't apear 5th time.");
                 System.out.println("You need to entre your "+(i+1)+"th card again");
-                card[i] = scanner.nextLine();
+                card[i] = enterCards.nextLine();
                 while (!cardValide(card[i])) {
                     System.out.println("You need to entre your card again,  what you enter is illegal.");
                     System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
-                    card[i]=scanner.nextLine();
+                    card[i]=enterCards.nextLine();
                 }
-                //System.out.println(card[i]);
+                System.out.println(card[i]);
                 total.set(p,card[i]);
                 same=0;
                 for (String c: total){
@@ -148,8 +147,8 @@ public class Deal {
 
     public static void main(String[] args){
         Deal deal = new Deal();
-        //deal.valideCard("77");
-        deal.initializeMain();
+        deal.valideCard("7");
+        //deal.initializeMain();
         //System.out.println();
     }
 }

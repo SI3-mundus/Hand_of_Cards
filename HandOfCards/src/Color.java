@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Color {
     String[] color = new String[5];
-    Color(){}
     Color(String[] color){
         this.color = color;
     }
