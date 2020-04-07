@@ -1,7 +1,7 @@
 public class Verify {
 
 
-    String theHighestCard(Hand hand){
+    int theHighestCard(Hand hand){
         String theHighestCard=hand.cards[0];
         int start=getValue(hand.cards[0]);
         for (String e:hand.cards){
@@ -10,51 +10,48 @@ public class Verify {
                 theHighestCard=e;
             }
         }
-        return theHighestCard;
+        return getValue(theHighestCard);
     }
-
     int getValue(String card){
         int value=0;
-        switch (card){
-            case  "":
+        switch (card.toCharArray()[0]){
+            case  '2' :
+                value=1;
                 break;
-            case  "2" :
-                value= 1;
+            case  '3' :
+                value=2;
                 break;
-            case  "3" :
-                value= 2;
-                break;
-            case  "4":
+            case  '4':
                 value=3;
                 break;
-            case  "5":
+            case  '5':
                 value=4;
                 break;
-            case  "6":
+            case  '6':
                 value=5;
                 break;
-            case  "7":
+            case  '7':
                 value=6;
                 break;
-            case  "8":
+            case  '8':
                 value=7;
                 break;
-            case  "9":
+            case  '9':
                 value=8;
                 break;
-            case  "10":
+            case  '1':
                 value=9;
                 break;
-            case  "V":
+            case  'V':
                 value=10;
                 break;
-            case  "D":
+            case  'D':
                 value=11;
                 break;
-            case  "R":
+            case  'R':
                 value=12;
                 break;
-            case  "A":
+            case  'A':
                 value=13;
                 break;
             default:
@@ -62,6 +59,7 @@ public class Verify {
         }
         return value;
     }
+
 
     //返回5张牌中相同牌出现的次数
     //"3Tr", "5Ca", "5Co", "5Tr", "3Co"
@@ -82,7 +80,7 @@ public class Verify {
     int isCarre(Hand hand){
         int count[]= numOfSameCard(hand);
         for(int i = 0; i < count.length; i++){
-            if(i == 4)
+            if(count[i] == 4)
                 return i;
         }
         return -1;
@@ -92,11 +90,11 @@ public class Verify {
         int count[] = numOfSameCard(hand);
         int c = -1;
         for (int i = 0; i < count.length; i++) {
-            if (i == 2) {
+            if (count[i] == 2) {
                 c = -1;
                 break;
             }
-            if (i == 3)
+            if (count[i] == 3)
                 c = i;
         }
         return c;
@@ -106,9 +104,9 @@ public class Verify {
         int count[] = numOfSameCard(hand);
         int c[] = new int[]{-1, -1};
         for (int i = 0; i < count.length; i++) {
-            if (i == 3)
+            if (count[i] == 3)
                 c[0] = i;
-            if (i == 2) {
+            if (count[i] == 2) {
                 c[1] = i;
             }
         }
@@ -121,9 +119,9 @@ public class Verify {
         int count[] = numOfSameCard(hand);
         int c[] = new int[]{-1, -1};
         for (int i = 0; i < count.length; i++) {
-            if (i == 2 && c[0] == -1)
+            if (count[i] == 2 && c[0] == -1)
                 c[0] = i;
-            else if (i == 2) {
+            else if (count[i] == 2) {
                 c[1] = i;
                 return -1;
             }
@@ -135,9 +133,9 @@ public class Verify {
         int count[] = numOfSameCard(hand);
         int c[] = new int[]{-1, -1};
         for (int i = 0; i < count.length; i++) {
-            if (i == 2 && c[0] == -1)
+            if (count[i] == 2 && c[0] == -1)
                 c[0] = i;
-            else if (i == 2) {
+            else if (count[i] == 2) {
                 c[1] = i;
                 return c;
             }

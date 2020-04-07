@@ -12,10 +12,11 @@
  * @version 2020/3/12
  */
 public class Hand {
-     String[] cards = new String[5];
+    String[] cards = new String[5];
     Hand(String[] cards){
         this.cards = cards;
     }
+    Hand(){}
 
     @Override
     public String toString() {

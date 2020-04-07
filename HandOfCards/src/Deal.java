@@ -116,12 +116,6 @@ public class Deal {
     }
 
 
-
-
-
-
-
-
     String winner(){
         return "La main" + " gagne avec ";
     }
