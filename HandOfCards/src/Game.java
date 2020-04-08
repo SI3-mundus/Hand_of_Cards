@@ -13,7 +13,7 @@ import java.util.List;
  * Description: 
  * @author yuqiao
  * @version 2020/3/25
- */
+*/
 public class Game {
     private List<Hand> hands = new ArrayList<>(2);
     Hand comparetTo(Hand lhand, Hand rhand){

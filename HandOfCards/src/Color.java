@@ -3,14 +3,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Color {
-<<<<<<< HEAD
+
     String color;
     int valueColor;
     Color(String color){
-=======
-    String[] color;
-    Color(String[] color){
->>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
         this.color = color;
         valueColor=getValueOfColor(color);
     }

@@ -1,7 +1,6 @@
 public class Verify {
 
 
-<<<<<<< HEAD
     Card theHighestCard(Hand hand) {
         Card theHighestCard = hand.cards.get(0);
         int start = hand.cards.get(0).chiffre.getChiffreValue();
@@ -9,70 +8,11 @@ public class Verify {
             if (start < e.chiffre.getChiffreValue()) {
                 start = e.chiffre.getChiffreValue();
                 theHighestCard = e;
-=======
-    int theHighestCard(Hand hand){
-        String theHighestCard=hand.cards[0];
-        int start=getValue(hand.cards[0]);
-        for (String e:hand.cards){
-            if (start<getValue(e)){
-                start=getValue(e);
-                theHighestCard=e;
->>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
+
             }
         }
-        return getValue(theHighestCard);
+        return theHighestCard;
     }
-<<<<<<< HEAD
-}
-=======
-    int getValue(String card){
-        int value=0;
-        switch (card.toCharArray()[0]){
-            case  '2' :
-                value=1;
-                break;
-            case  '3' :
-                value=2;
-                break;
-            case  '4':
-                value=3;
-                break;
-            case  '5':
-                value=4;
-                break;
-            case  '6':
-                value=5;
-                break;
-            case  '7':
-                value=6;
-                break;
-            case  '8':
-                value=7;
-                break;
-            case  '9':
-                value=8;
-                break;
-            case  '1':
-                value=9;
-                break;
-            case  'V':
-                value=10;
-                break;
-            case  'D':
-                value=11;
-                break;
-            case  'R':
-                value=12;
-                break;
-            case  'A':
-                value=13;
-                break;
-            default:
-                System.out.println("illegal card");
-        }
-        return value;
-    }
->>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
 
 
     //返回5张牌中相同牌出现的次数
@@ -162,7 +102,7 @@ public class Verify {
         //Hand hand=new Hand();
         System.out.println(verify.theHighestCard(hand));
     }
-}
+
 
     */
-
+}
