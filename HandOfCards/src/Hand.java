@@ -6,21 +6,24 @@
  * Description:
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Description: 
  * @author yuqiao
  * @version 2020/3/12
  */
 public class Hand {
-     String[] cards = new String[5];
-    Hand(String[] cards){
+     List<Card> cards=new ArrayList<>();
+    Hand(List<Card> cards){
         this.cards = cards;
     }
 
     @Override
     public String toString() {
         String s = "";
-        for (String card : cards) {
+        for (Card card : cards) {
             s+=card+" ";
         }
         return s;

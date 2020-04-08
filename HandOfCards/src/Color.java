@@ -3,20 +3,21 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Color {
-    String[] color = new String[5];
-    Color(){}
-    Color(String[] color){
+    String color;
+    int valueColor;
+    Color(String color){
         this.color = color;
+        valueColor=getValueOfColor(color);
     }
-    @Override
-    public String toString() {
-        String s = "";
-        for (String color : color) {
-            s+=color+" ";
-        }
-        return s;
+
+    public String getColor() {
+        return color;
     }
-    boolean verifyColor(String color){
+    public int getColorValue(){
+        return valueColor;
+    }
+
+    boolean verifyColor(){
         boolean legalcolor = false;
         switch (color){
             case  "":
@@ -39,7 +40,7 @@ public class Color {
         }
         return legalcolor;
     }
-    int getColor(String color){
+    int getValueOfColor(String color){
         int value =0;
         switch (color){
             case  "":
@@ -57,7 +58,7 @@ public class Color {
                 value=4;
                 break;
             default:
-                System.out.println("illegal color");
+                System.out.println("illegal card");
         }
         return value;
     }

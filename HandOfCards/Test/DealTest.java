@@ -10,12 +10,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class DealTest {
-    String card1="R";
-    String card2="15";
-    String card3="7";
-    String[] cardlist1=new String[]{"2","5","A","10","V"};
-    String[] cardlist2=new String[]{"1","5","7","10","V"};
-    String[] cardlist3=new String[]{"3","3","3","3","3"};
+    Color c1=new Color("Tr");
+    Color c2=new Color("Ca");
+    Color c3=new Color("Co");
+    Color c4=new Color("Pi");
+    Color c5=new Color("Ak");
+    Chiffre n1=new Chiffre("2");
+    Chiffre n2=new Chiffre("6");
+    Chiffre n3=new Chiffre("V");
+    Chiffre n4=new Chiffre("10");
+    Chiffre n5=new Chiffre("A");
+    Chiffre n6=new Chiffre("1");
     private Hand Main1;
     private Hand Main2;
     private Hand Main3;
@@ -26,46 +31,31 @@ public class DealTest {
     @BeforeEach
     void setUp() {
         // assigns a very small 2-card deck to each player
-        Main1 = new Hand(cardlist1);
-        Main2 = new Hand(cardlist2);
-        Main3 = new Hand(cardlist3);
+        Card card1=new Card(n1,c1);
+        Card card2=new Card(n2,c2);
+        Card card3=new Card(n3,c3);
+        Card card4=new Card(n4,c4);
+        /*Card card5=new Card();
+        Card card6=new Card();
+        Card card7=new Card();
+        Card card8=new Card();
+        Card card9=new Card();
+        Card card10=new Card();
+        Card card11=new Card();
+        Card card12=new Card();
+        Card card13=new Card();
+
+         */
+        Card card14=new Card(n6,c3);//illegal card
+        Card card15=new Card(n2,c5);//illegal card
+
         hands.add(Main1);
         hands.add(Main2);
         hands.add(Main3);
         deal=new Deal();
     }
 
-    @Test
-    void init(){
-        assertAll(
-                () -> assertEquals(3, hands.size()),
-                () -> assertEquals(5, Main1.cards.length),
-                () -> assertEquals(5, cardlist3.length)
-        );
-    }
-    @Test
-    void cardvalider(){
-        assertAll(
-                () -> assertTrue(deal.cardValide(card1)),
-                () -> assertTrue(!deal.cardValide(card2)),
-                () -> assertTrue(deal.cardValide(card3))
-        );
-    }
-
-    @Test
-    void  valideCard(){
-        //assertEquals(,deal.valideCard(card2).);
-        String data="7";
-        InputStream stdin=System.in;
-        try{
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        deal.valideCard(card2);
-        }finally {
-            System.setIn(stdin);
-        }
 
 
-        //assertTrue(deal.valideCard(card2));
-    }
 
 }
