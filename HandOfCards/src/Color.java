@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Color {
-    String[] color = new String[5];
+    String[] color;
     Color(String[] color){
         this.color = color;
     }
