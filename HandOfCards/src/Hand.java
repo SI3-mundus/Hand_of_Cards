@@ -16,7 +16,7 @@ public class Hand {
     Hand(String[] cards){
         this.cards = cards;
     }
-
+    Hand(){}
     @Override
     public String toString() {
         String s = "";
@@ -25,5 +25,7 @@ public class Hand {
         }
         return s;
     }
+
+
 
 }

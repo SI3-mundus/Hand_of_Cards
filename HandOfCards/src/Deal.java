@@ -1,4 +1,3 @@
-import com.sun.tools.javac.Main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,9 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Deal {
-    private List<Hand>hands = new ArrayList<Hand>(2);
+    private List<Hand> hands = new ArrayList<Hand>(2);
     private List<String> total=new ArrayList<String>(10);
-    private String[] card;
+    private String[] cards;
     void initializeMain(){
         for(int i=0; i<2;i++){
             System.out.println("Vous etes la main"+(i+1));
@@ -23,122 +22,136 @@ public class Deal {
         Scanner enterCards= new Scanner(System.in);
         System.out.println("Please Enter Your 5 cards");
         String input=enterCards.nextLine();
-        card = input.split(" ");
-        //System.out.println(Arrays.toString(card)+card.length);
-        //for (int i=0;i<card.length;i++){System.out.println(card[i]);}
-        while(card.length!=5){
-            System.out.println("Please Enter Your 5 cards");
-            input=enterCards.nextLine();
-            card = input.split(" ");
+        cards = input.split(" ");
+        if(cards.length!=5){
+            System.out.println("what you enter is illegal.");
+            System.exit(1);
         }
-        for (int i = 0; i < card.length; i++) { valideCard(card[i]);}
-        for(int i = 0; i < card.length; i++){total.add(card[i]);}
-        valideSame(card);
-        return card;
+        for (int i = 0; i < cards.length; i++) { valideCard(cards[i]);}
+        total.addAll(Arrays.asList(cards));
+        valideSame(cards);
+        return cards;
     }
-
-    boolean cardValide(String card){
-        boolean legalcard = false;
-        switch (card){
-            case  "":
-                break;
+    boolean numValide(String card){
+        boolean legalnum = false;
+        switch (card.substring(0,1)){
             case  "2" :
-                legalcard= true;
+                legalnum= true;
                 break;
             case  "3" :
-                legalcard= true;
+                legalnum= true;
                 break;
             case  "4":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "5":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "6":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "7":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "8":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "9":
-                legalcard=true;
+                legalnum=true;
                 break;
-            case  "10":
-                legalcard=true;
+            case  "1":
+                if(card.substring(0,2).equals("10")) legalnum=true;
                 break;
             case  "V":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "D":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "R":
-                legalcard=true;
+                legalnum=true;
                 break;
             case  "A":
-                legalcard=true;
+                legalnum=true;
                 break;
             default:
-                legalcard= false;
+                legalnum= false;
         }
-        return legalcard;
+        return legalnum;
+    }
+    boolean colorValide(String card){
+        boolean legalcolor = false;
+        if(card.substring(0,1).equals("1")){
+            switch (card.substring(2,4)){
+                case  "Tr" :
+                    legalcolor= true;
+                    break;
+                case  "Ca" :
+                    legalcolor= true;
+                    break;
+                case  "Co":
+                    legalcolor=true;
+                    break;
+                case  "Pi":
+                    legalcolor=true;
+                    break;
+                default:
+                    legalcolor= false;
+            }
+        }else{
+            switch (card.substring(1,3)){
+                case  "Tr" :
+                    legalcolor= true;
+                    break;
+                case  "Ca" :
+                    legalcolor= true;
+                    break;
+                case  "Co":
+                    legalcolor=true;
+                    break;
+                case  "Pi":
+                    legalcolor=true;
+                    break;
+                default:
+                    legalcolor= false;
+            }
+        }
+        return legalcolor;
+    }
+    boolean cardValide(String card){
+        if(!numValide(card)) return false;
+        return colorValide(card);
+    }
+    void valideCard(String card) {
+        while (!cardValide(card)) {
+            System.out.println("what you enter is illegal.");
+            System.exit(1);
+        }
+
     }
 
-    void valideCard(String card1) {
-
-        while (!cardValide(card1)) {
-            System.out.println("You need to entre your card again,  what you enter is illegal.");
-            System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
-            Scanner scanner=new Scanner(System.in);
-            card1=scanner.nextLine();
-        }
-
-    }
-
-    void valideSame(String[] card){
+    void valideSame(String[] cards){
         Scanner scanner=new Scanner(System.in);
         int p=0;
-        for (int i = 0; i < card.length; i++) {
-            int same=0;
-            for (String c: total){
-                if(card[i].equals(c)){
+        for (String card : cards) {
+            int same = 0;
+            for (String c : total) {
+                if (card.equals(c)) {
                     same++;
                 }
-                if(same==5){
-                    p=total.indexOf(c);
-                }
+            }
+            if (same > 1) {
+                System.out.println("The card has already appeared, it can't apear 2 times.");
+                System.exit(1);
             }
 
-            while (same==5){
-                System.out.println("The number has already appeared 4 times, it can't apear 5th time.");
-                System.out.println("You need to entre your "+(i+1)+"th card again");
-                card[i] = scanner.nextLine();
-                while (!cardValide(card[i])) {
-                    System.out.println("You need to entre your card again,  what you enter is illegal.");
-                    System.out.println("The card should be one of these: 2,3,4,5,6,7,8,9,10,V,D,R,A");
-                    card[i]=scanner.nextLine();
-                }
-                //System.out.println(card[i]);
-                total.set(p,card[i]);
-                same=0;
-                for (String c: total){
-                    if(card[i].equals(c)){
-                        same++;
-                    }
-                }
-            }
         }
 
     }
 
+    List<Hand> getHands(){return hands;}
 
 
-    String winner(){
-        return "La main" + " gagne avec ";
-    }
 
 
 
