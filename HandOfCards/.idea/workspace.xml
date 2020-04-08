@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="">
+    <list default="true" id="25585123-3345-49e6-80d0-df603e847c54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VerifyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Card.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/META-INF/HandOfCards.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deal.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/HandOfCards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HandOfCards.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Verify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verify.java" afterDir="false" />
+>>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -39,18 +48,23 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+=======
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+>>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -69,7 +83,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.Deal">
+=======
+  <component name="RunManager" selected="Application.Verify">
+>>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
     <configuration name="Deal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Deal" />
       <module name="HandOfCards" />
@@ -86,6 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="CardTest.cardvalider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HandOfCards" />
       <option name="PACKAGE_NAME" value="" />
@@ -123,6 +142,12 @@
         <item itemvalue="JUnit.CardTest.init" />
         <item itemvalue="JUnit.CardTest" />
         <item itemvalue="JUnit.DealTest.valideCard" />
+=======
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Verify" />
+        <item itemvalue="Application.Deal" />
+>>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
       </list>
     </recent_temporary>
   </component>
@@ -131,12 +156,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="" />
+      <changelist id="25585123-3345-49e6-80d0-df603e847c54" name="Default Changelist" comment="" />
       <created>1584009229201</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584009229201</updated>
       <workItem from="1584009230589" duration="386000" />
+      <workItem from="1585208383936" duration="1840000" />
+      <workItem from="1585806306794" duration="1868000" />
+      <workItem from="1585817848477" duration="154000" />
+      <workItem from="1585839942165" duration="358000" />
+      <workItem from="1585840720316" duration="350000" />
+      <workItem from="1586256874493" duration="444000" />
+      <workItem from="1586270711343" duration="124000" />
     </task>
     <servers />
   </component>

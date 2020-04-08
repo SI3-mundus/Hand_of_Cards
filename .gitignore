@@ -2,4 +2,9 @@
 HandOfCards/.idea/workspace.xml
 *.xml
 *.xml
+<<<<<<< HEAD
 *.xml
+=======
+HandOfCards/.idea/workspace.xml
+HandOfCards/HandOfCards.iml
+>>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7

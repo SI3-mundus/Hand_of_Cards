@@ -1,15 +1,6 @@
-public class Verify {
+public class Verify_A {
 
 
-<<<<<<< HEAD
-    Card theHighestCard(Hand hand) {
-        Card theHighestCard = hand.cards.get(0);
-        int start = hand.cards.get(0).chiffre.getChiffreValue();
-        for (Card e : hand.cards) {
-            if (start < e.chiffre.getChiffreValue()) {
-                start = e.chiffre.getChiffreValue();
-                theHighestCard = e;
-=======
     int theHighestCard(Hand hand){
         String theHighestCard=hand.cards[0];
         int start=getValue(hand.cards[0]);
@@ -17,17 +8,13 @@ public class Verify {
             if (start<getValue(e)){
                 start=getValue(e);
                 theHighestCard=e;
->>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
             }
         }
         return getValue(theHighestCard);
     }
-<<<<<<< HEAD
-}
-=======
-    int getValue(String card){
+    int getValue(String number){
         int value=0;
-        switch (card.toCharArray()[0]){
+        switch (number.toCharArray()[0]){
             case  '2' :
                 value=1;
                 break;
@@ -72,16 +59,15 @@ public class Verify {
         }
         return value;
     }
->>>>>>> c0588f5405f61daa17a1592cf8e484f922652fb7
 
 
     //返回5张牌中相同牌出现的次数
     //"3Tr", "5Ca", "5Co", "5Tr", "3Co"
     //返回值为[2,3,0,0,0] 3为对子,5出现了3次
-   /* int[] numOfSameCard(Hand hand){
+    int[] numOfSameCard(Hand hand){
         int count[] =new int[]{0,0,0,0,0};
-        for(int i = 0; i < hand.cards.size(); i++){
-            for(int j = 0; j < hand.cards.size(); j++){
+        for(int i = 0; i < hand.cards.length; i++){
+            for(int j = 0; j < hand.cards.length; j++){
                 if(j < i && hand.cards[i].toCharArray()[0] == hand.cards[j].toCharArray()[0])break;
                 if(hand.cards[i].toCharArray()[0] == hand.cards[j].toCharArray()[0])
                     count[i]++;
@@ -159,10 +145,7 @@ public class Verify {
 
     public static void main(String[] args){
         Verify verify=new Verify();
-        //Hand hand=new Hand();
+        Hand hand=new Hand(new String[]{"2", "4","6","V","7"});
         System.out.println(verify.theHighestCard(hand));
     }
 }
-
-    */
-
