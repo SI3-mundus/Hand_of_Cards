@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 
 public class Deal {
     private List<Hand>hands = new ArrayList<Hand>();
-
     private List<Card> total=new ArrayList<>();
 
     void initializeMain(){
@@ -60,18 +59,19 @@ public class Deal {
 
     boolean valideSame(List<Card> cards) {
 
-        for (int i = 0; i <5; i++) {
+        for (int i = 0; i <cards.size(); i++) {
             int same = 0;
             for (Card c : total) {
-                if (c.equals(cards.get(i))) {
+                if (cards.get(i).compareTo(c)==1) {
                     same++;
                 }
                 System.out.println(same);
 
-                if (same == 2) {
+                while (same == 2) {
                     System.out.println("The card has already appeared, it can't apear 2 times.");
                     System.exit(1);
                 }
+
             }
 
         }
