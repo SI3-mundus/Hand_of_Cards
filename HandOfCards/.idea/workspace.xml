@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Test/CardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Chiffre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandOfCards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HandOfCards.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/ColorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/DealTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/DealTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Hand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Verify.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Verify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HandOfCards/ColorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HandOfCards/ColorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/HandOfCards/DealTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HandOfCards/DealTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/DealTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Verify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verify.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +52,7 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -71,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DealTest.valideCard">
+  <component name="RunManager" selected="Application.Deal">
     <configuration name="Deal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Deal" />
       <module name="HandOfCards" />
@@ -79,18 +88,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Verify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Verify" />
+    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HandOfCards" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CardTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DealTest.cardvalider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardTest.cardvalider" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HandOfCards" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DealTest" />
+      <option name="MAIN_CLASS_NAME" value="CardTest" />
       <option name="METHOD_NAME" value="cardvalider" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTest.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HandOfCards" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CardTest" />
+      <option name="METHOD_NAME" value="init" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,10 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DealTest.valideCard" />
         <item itemvalue="Application.Deal" />
-        <item itemvalue="JUnit.DealTest.cardvalider" />
-        <item itemvalue="Application.Verify" />
+        <item itemvalue="JUnit.CardTest.cardvalider" />
+        <item itemvalue="JUnit.CardTest.init" />
+        <item itemvalue="JUnit.CardTest" />
+        <item itemvalue="JUnit.DealTest.valideCard" />
       </list>
     </recent_temporary>
   </component>
