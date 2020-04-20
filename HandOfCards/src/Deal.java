@@ -157,9 +157,19 @@ public class Deal {
 
 
     public static void main(String[] args){
-        Deal deal = new Deal();
-        //deal.valideCard("77");
-        deal.initializeMain();
-        //System.out.println();
+        List<String> t = new ArrayList<>();
+        for(int i = 0; i < 5; i++)
+            t.add("1");
+        t.add("2");
+        for (int i = t.size()-1; i >=0; i--) {
+            if ("1" == t.get(i)) {
+                t.remove(i);
+            }
+        }
+        System.out.println(t);
+//        Deal deal = new Deal();
+//        //deal.valideCard("77");
+//        deal.initializeMain();
+//        //System.out.println();
     }
 }

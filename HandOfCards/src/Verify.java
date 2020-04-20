@@ -5,10 +5,10 @@ import java.util.List;
 public class Verify {
 
 
-    String theHighestCard(Hand hand){
-        String theHighestCard = hand.cards[0];
-        int start = getValue(hand.cards[0]);
-        for (String e:hand.cards){
+    String theHighestCard(String[] cards){
+        String theHighestCard = cards[0];
+        int start = getValue(cards[0]);
+        for (String e:cards){
             if (start<getValue(e)){
                 start=getValue(e);
                 theHighestCard=e;
@@ -17,11 +17,28 @@ public class Verify {
         }
         return theHighestCard;
     }
+
+    List<Integer> getSortedValues(String[] cards){
+        List<Integer> nums = new ArrayList<>();
+        for (String i : cards){
+            nums.add(getValue(i));
+        }
+        nums.sort(Integer::compareTo);
+        return nums;
+    }
+
+    List<Integer> getSortedValues(List<String> cards){
+        List<Integer> nums = new ArrayList<>();
+        for (String i : cards){
+            nums.add(getValue(i));
+        }
+        nums.sort(Integer::compareTo);
+        return nums;
+    }
+
     int getColor(String color){
         int value =0;
         switch (color){
-            case  "":
-                break;
             case  "Tr" :
                 value=1;
                 break;
@@ -196,10 +213,11 @@ public class Verify {
     }
     //返回同花的颜色
     int isSameColor(Hand hand){
-        int c = getColor(hand.cards[0]);
+        int c = getColorValue(hand.cards[0]);
         for (int i = 0; i < hand.cards.length; i++) {
-            if(c != getColor(hand.cards[i])) return -1;
+            if(c != getColorValue(hand.cards[i])) return -1;
         }
+
         return c;
     }
     //返回同花顺的最大的那一张的位置
@@ -210,8 +228,8 @@ public class Verify {
     public static void main(String[] args){
         Verify verify=new Verify();
         Hand hand=new Hand(new String[]{"8","10","D","V","9"});
-        System.out.println(verify.theHighestCard(hand));
-        System.out.println(verify.getValue(verify.theHighestCard(hand)));
+        System.out.println(verify.theHighestCard(hand.cards));
+        System.out.println(verify.getValue(verify.theHighestCard(hand.cards)));
     }
 }
 

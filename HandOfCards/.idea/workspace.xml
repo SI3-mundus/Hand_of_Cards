@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="910d1f35-8b0a-4399-89ff-dc24fee4c99f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HandOfCards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HandOfCards.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/ColorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/DealTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/DealTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Color.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Deal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Hand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HandOfCards/Verify.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HandOfCards/Verify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HandOfCards/ColorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HandOfCards/ColorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HandOfCards/ColorTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Verify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,8 +122,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Game" />
-        <item itemvalue="Application.Verify" />
         <item itemvalue="Application.Deal" />
+        <item itemvalue="Application.Verify" />
         <item itemvalue="JUnit.DealTest.valideCard" />
         <item itemvalue="JUnit.DealTest.cardvalider" />
       </list>
@@ -152,6 +140,8 @@
       <option name="presentableId" value="Default" />
       <updated>1584009229201</updated>
       <workItem from="1584009230589" duration="386000" />
+      <workItem from="1586414813009" duration="5080000" />
+      <workItem from="1587360263442" duration="12110000" />
     </task>
     <servers />
   </component>
