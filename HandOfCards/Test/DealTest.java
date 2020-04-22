@@ -10,9 +10,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class DealTest {
-    String card1="R";
-    String card2="15";
-    String card3="7";
+    String card1="RCo";
+    String card2="15Pi";
+    String card3="7Tr";
     String[] cardlist1=new String[]{"2","5","A","10","V"};
     String[] cardlist2=new String[]{"1","5","7","10","V"};
     String[] cardlist3=new String[]{"3","3","3","3","3"};
@@ -54,12 +54,12 @@ public class DealTest {
 
     @Test
     void  valideCard(){
-        //assertEquals(,deal.valideCard(card2).);
+//        assertEquals(1,deal.valideCard(card2));
         String data="7";
         InputStream stdin=System.in;
         try{
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        deal.valideCard(card2);
+            System.setIn(new ByteArrayInputStream(data.getBytes()));
+            deal.valideCard(card2);
         }finally {
             System.setIn(stdin);
         }
