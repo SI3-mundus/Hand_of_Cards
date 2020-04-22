@@ -51,7 +51,7 @@ public class CardTest {
         );
     }
     @Test
-    void cardvalider(){
+    void valideCard(){
         assertAll(
                 () -> assertTrue(card2.valideCard()),
                 () -> assertTrue(card4.valideCard()),
@@ -59,6 +59,15 @@ public class CardTest {
                 () -> assertTrue(!card10.valideCard())
         );
     }
+    @Test
+    void testToString() {
+        assertEquals("2Tr", card1.toString());
+    }
 
+    @Test
+    void compare() {
+        assertAll(
+                () -> assertEquals(1, card1.compareTo(card1))
+        );
+    }
 }
-
